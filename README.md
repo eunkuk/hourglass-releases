@@ -4,9 +4,10 @@ Hourglass 데스크톱 앱(macOS·Windows)의 설치 파일과 자동 업데이�
 소스 코드는 포함하지 않습니다.
 
 - 최신 설치 파일: [Releases](https://github.com/eunkuk/hourglass-releases/releases/latest)
-  - macOS: `Hourglass_<버전>_universal.dmg`
-  - Windows: `Hourglass_<버전>_x64-setup.exe`
-- 설치된 앱은 **설정 → 연결 → 앱 업데이트**에서 새 버전을 확인하고 설치합니다.
-- `latest.json`과 `.sig` 파일은 앱의 자동 업데이트가 읽는 매니페스트와 서명입니다.
+  - macOS(Apple Silicon): `Hourglass_<버전>_aarch64.dmg`
+  - Windows: `Hourglass_<버전>_x64-setup.exe` — 릴리즈에 따라 빠질 수 있습니다(현재 0.2.2 는 macOS 만).
+- 설치된 앱은 **설정 → 연결 → 앱 업데이트**에서 새 버전을 확인하고 설치합니다(시작 15초 뒤와 6시간마다 자동 확인).
+- `latest.json`, `Hourglass_aarch64.app.tar.gz`와 `.sig`는 앱의 자동 업데이트가 읽는 매니페스트·패키지·서명입니다.
+  직접 내려받을 필요는 없습니다.
 
-앱은 Apple 서명·공증과 Windows 코드 서명을 하지 않으므로 첫 설치 때 OS 경고를 지나야 합니다.
+Apple 서명·공증과 Windows 코드 서명은 하지 않으므로 첫 설치 때 OS 경고를 지나야 합니다. 이후 업데이트는 앱이 직접 내려받아 교체합니다.
